@@ -9,7 +9,10 @@
   </head>
   <body>
     <div id="app">
-      <h2>How bout here instead?</h2>
+      <h2>title: {{title}}, author: {{author}}, age: {{age}}</h2>
+      <button v-on:click="age=age+1">Increase age by one</button>
+      <button @click="age=age-1">Decrease age by one</button>
+      <button @click="changeTitle('Bio')">Change Title</button>
     </div>
     <script src="app.js"></script>
   </body>
