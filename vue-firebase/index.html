@@ -9,10 +9,17 @@
   </head>
   <body>
     <div id="app">
-      <h2>title: {{title}}, author: {{author}}, age: {{age}}</h2>
-      <button v-on:click="age=age+1">Increase age by one</button>
-      <button @click="age=age-1">Decrease age by one</button>
-      <button @click="changeTitle('Bio')">Change Title</button>
+      <div v-if="show">
+        <h2>title: {{title}}, author: {{author}}, age: {{age}}</h2>
+        <button v-on:click="age=age+1">Increase age by one</button>
+        <button @click="age=age-1">Decrease age by one</button>
+        <button @click="changeTitle('Bio')">Change the Title</button>
+      </div>
+      <button @click="toggleShow">
+        <span v-if="show">Hide Books</span>
+        <span v-else>Show Books</span>
+      </button>
+      <div v-show="show">Check devtool</div>
     </div>
     <script src="app.js"></script>
   </body>
