@@ -20,7 +20,13 @@
   <body>
     <div id="app">
       <div v-if="show">
-        <h2>title: {{title}}, author: {{author}}, age: {{age}}</h2>
+        <!-- <h2>title: {{title}}, author: {{author}}, age: {{age}}</h2> -->
+        <ul>
+          <li v-for="city in cities">
+            <span>{{city.country}}</span> <span>{{city.capital}}</span> -
+            {{city.continent}}
+          </li>
+        </ul>
         <button v-on:click="age=age+1">Increase age by one</button>
         <button @click="age=age-1">Decrease age by one</button>
         <button @click="changeTitle('Bio')">Change the Title</button>

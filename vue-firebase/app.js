@@ -7,6 +7,11 @@ const app = Vue.createApp({
       age: 48,
       x: 0,
       y: 0,
+      cities: [
+        { country: 'Korea', capital: 'Seoul', continent: 'Asia' },
+        { country: 'US', capital: 'DC', continent: 'N America' },
+        { country: 'Spain', capital: 'Madrid', continent: 'Europe' },
+      ],
     };
   },
   methods: {
