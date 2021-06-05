@@ -5,6 +5,8 @@ const app = Vue.createApp({
       title: 'The Final Emperor',
       author: 'Jane Wu',
       age: 48,
+      x: 0,
+      y: 0,
     };
   },
   methods: {
@@ -14,6 +16,18 @@ const app = Vue.createApp({
     },
     toggleShow() {
       this.show = !this.show;
+    },
+    handleEvent(evt, data) {
+      if (data) {
+        console.log(evt, evt.type);
+        console.log(data);
+      } else {
+        console.log('nada');
+      }
+    },
+    handleMouseMove(evt) {
+      this.x = evt.offsetX;
+      this.y = evt.offsetY;
     },
   },
 });
