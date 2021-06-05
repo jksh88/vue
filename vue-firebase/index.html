@@ -15,6 +15,9 @@
         margin: 20px;
         display: inline-block;
       }
+      .far {
+        color: rgb(0, 200, 100);
+      }
     </style>
   </head>
   <body>
@@ -22,7 +25,7 @@
       <div v-if="show">
         <!-- <h2>title: {{title}}, author: {{author}}, age: {{age}}</h2> -->
         <ul>
-          <li v-for="city in cities">
+          <li v-for="city in cities" :class="{far: city.isFar}">
             <span>{{city.country}}</span> <span>{{city.capital}}</span> -
             {{city.continent}} <a :href="city.website">City website</a>
           </li>

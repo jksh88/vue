@@ -13,18 +13,21 @@ const app = Vue.createApp({
           capital: 'Seoul',
           continent: 'Asia',
           website: 'https://www.seoul.go.kr',
+          isFar: true,
         },
         {
           country: 'US',
           capital: 'DC',
           continent: 'N America',
           website: 'https://www.dc.gov',
+          isFar: false,
         },
         {
           country: 'Spain',
           capital: 'Madrid',
           continent: 'Europe',
           website: 'https://www.esmadrid.com/',
+          isFar: true,
         },
       ],
     };
