@@ -24,7 +24,7 @@
         <ul>
           <li v-for="city in cities">
             <span>{{city.country}}</span> <span>{{city.capital}}</span> -
-            {{city.continent}}
+            {{city.continent}} <a :href="city.website">City website</a>
           </li>
         </ul>
         <button v-on:click="age=age+1">Increase age by one</button>

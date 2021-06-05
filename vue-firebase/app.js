@@ -8,9 +8,24 @@ const app = Vue.createApp({
       x: 0,
       y: 0,
       cities: [
-        { country: 'Korea', capital: 'Seoul', continent: 'Asia' },
-        { country: 'US', capital: 'DC', continent: 'N America' },
-        { country: 'Spain', capital: 'Madrid', continent: 'Europe' },
+        {
+          country: 'Korea',
+          capital: 'Seoul',
+          continent: 'Asia',
+          website: 'https://www.seoul.go.kr',
+        },
+        {
+          country: 'US',
+          capital: 'DC',
+          continent: 'N America',
+          website: 'https://www.dc.gov',
+        },
+        {
+          country: 'Spain',
+          capital: 'Madrid',
+          continent: 'Europe',
+          website: 'https://www.esmadrid.com/',
+        },
       ],
     };
   },
