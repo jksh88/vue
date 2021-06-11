@@ -52,6 +52,17 @@ const app = Vue.createApp({
       this.x = evt.offsetX;
       this.y = evt.offsetY;
     },
+    toggleFar(city) {
+      city.isFar = !city.isFar;
+    },
+    handleQlik() {
+      console.log(this.$refs.name);
+    },
+  },
+  computed: {
+    filteredCities() {
+      return this.cities.filter((city) => city.isFar);
+    },
   },
 });
 

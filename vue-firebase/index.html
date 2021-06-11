@@ -25,7 +25,11 @@
       <div v-if="show">
         <!-- <h2>title: {{title}}, author: {{author}}, age: {{age}}</h2> -->
         <ul>
-          <li v-for="city in cities" :class="{far: city.isFar}">
+          <li
+            v-for="city in filteredCities"
+            :class="{far: city.isFar}"
+            @click="toggleFar(city)"
+          >
             <span>{{city.country}}</span> <span>{{city.capital}}</span> -
             {{city.continent}} <a :href="city.website">City website</a>
           </li>
@@ -33,6 +37,8 @@
         <button v-on:click="age=age+1">Increase age by one</button>
         <button @click="age=age-1">Decrease age by one</button>
         <button @click="changeTitle('Bio')">Change the Title</button>
+        <input type="text" ref="name" />
+        <button @click="handleQlik">click to test</button>
       </div>
       <button @click="toggleShow">
         <span v-if="show">Hide Books</span>
