@@ -57,6 +57,8 @@ const app = Vue.createApp({
     },
     handleQlik() {
       console.log(this.$refs.name);
+      this.$refs.name.classList.add('active');
+      this.$refs.name.focus();
     },
   },
   computed: {
